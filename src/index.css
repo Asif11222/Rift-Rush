@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cyber: 'Chakra Petch', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #080C18;
+    color: #E2E8F0;
+    font-family: var(--font-cyber);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+.font-mono-numbers {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Prevent text drag / callouts on touch controls */
+.touch-control {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* Glowing text effects */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.glow-gold {
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.6), 0 0 20px rgba(255, 209, 102, 0.3);
+}
+
+.glow-purple {
+  text-shadow: 0 0 10px rgba(155, 92, 255, 0.6), 0 0 20px rgba(155, 92, 255, 0.3);
+}
+
+.glow-red {
+  text-shadow: 0 0 10px rgba(255, 90, 117, 0.6), 0 0 20px rgba(255, 90, 117, 0.3);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 12, 24, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.6);
+}
